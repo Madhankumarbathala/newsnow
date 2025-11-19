@@ -1,5 +1,5 @@
 const BASE = "https://newsapi.org/v2";
-const API_KEY = 6d54cfbb515c4dd6af0ed2de808ae991;
+const API_KEY = import.meta.env.VITE_NEWS_API_KEY || "";
 
 export async function fetchTopHeadlines({ category = "general", q = "" } = {}) {
   if (!API_KEY) {
